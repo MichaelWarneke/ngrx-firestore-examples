@@ -115,7 +115,8 @@
         "npmScope": "ngrx-firestore-examples",
         "lazyLoad": [
           "login",
-          "logout"
+          "first",
+          "second"
         ],
         "allow": []
       }

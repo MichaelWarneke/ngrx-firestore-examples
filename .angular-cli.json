@@ -44,14 +44,20 @@
       "appRoot": ""
     },
     {
-      "name": "login",
-      "root": "libs/login/src",
+      "name": "first",
+      "root": "libs\\first\\src",
       "test": "../../../test.js",
       "appRoot": ""
     },
     {
-      "name": "logout",
-      "root": "libs/logout/src",
+      "name": "login",
+      "root": "libs\\login\\src",
+      "test": "../../../test.js",
+      "appRoot": ""
+    },
+    {
+      "name": "second",
+      "root": "libs\\second\\src",
       "test": "../../../test.js",
       "appRoot": ""
     }

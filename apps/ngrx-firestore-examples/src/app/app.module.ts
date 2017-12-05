@@ -23,15 +23,9 @@ import { CustomRouterStateSerializer } from './shared/utils';
       [
         { path: '', component: LandingPageComponent },
         { path: 'login', loadChildren: '@ngrx-firestore-examples/login#LoginModule' }, 
-        { path: 'logout', loadChildren: '@ngrx-firestore-examples/logout#LogoutModule' }
-/*        { path: 'login', loadChildren: '@daycare/login#LoginModule' },
-        { path: 'logout', loadChildren: '@daycare/logout#LogoutModule', canLoad: [AuthGuard] },
-        { path: 'profile', loadChildren: '@daycare/profile#ProfileModule', canLoad: [AuthGuard] },
-        { path: 'attendance', loadChildren: '@daycare/attendance#AttendanceModule', canLoad: [AuthGuard] },
-        { path: 'payment', loadChildren: '@daycare/payment#PaymentModule', canLoad: [AuthGuard] },
-        { path: 'rebate', loadChildren: '@daycare/rebate#RebateModule', canLoad: [AuthGuard] },
-        { path: 'summary', loadChildren: '@daycare/summary#SummaryModule', canLoad: [AuthGuard] }
-      */      ],
+        { path: 'first', loadChildren: '@ngrx-firestore-examples/first#FirstModule', canLoad: [AuthGuard] }, 
+        { path: 'second', loadChildren: '@ngrx-firestore-examples/second#SecondModule', canLoad: [AuthGuard] }
+      ],
       {
         initialNavigation: 'enabled'
       }

@@ -5,6 +5,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { AuthDbService } from './services/auth-db.service';
+import { DataDbService } from './services/data-db.service';
 import { firebaseData } from 'firebase-data';
 
 @NgModule({
@@ -19,7 +20,7 @@ export class DbModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: DbModule,
-      providers: [AuthDbService]
+      providers: [AuthDbService, DataDbService]
     }
   }
 }

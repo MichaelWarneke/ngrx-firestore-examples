@@ -10,6 +10,10 @@ nav {
   background-color: lightblue;
 }
 
+.authenticated {
+  background-color: lightgreen;
+}
+
 nav h1 {
   margin: 0;
   padding-left: 10px;
@@ -27,6 +31,9 @@ main {
   margin: 2px;
 }
 
+.login-button {
+  margin: 2px;
+}
 .error-message {
   background-color: red;
   color: white;
