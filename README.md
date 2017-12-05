@@ -16,3 +16,21 @@ I am using nrwl as I think the lib structure is a good place to seperate all the
 There is a lib for the the database access functions and different lazy loaded libs for different connections to ngrx.
 
 Feel free to comment and pull your own approaches...
+
+# Setup
+
+--APP
+The App just acts as a container for the authentication and the different libs. It handles the login/logout and routes via the nav buttons to the different libs.
+
+--auth
+Auth is the lib handling the authentication. For my database a setup a fake user with a fake password. This is neccessary to to similate the problems occour when the observables are still hot but the user is not authenticated anymore.
+
+--db
+Db is the lib to handle all database connections. Pretty straight forward and nothing special to that for the moment.
+
+# first
+
+First lib handling the data with ngrx entity and the advantage of the firestore valueChanges() function.
+Basically, in the effects class I linked the valueChanges() with actions from the store. In this case any updates happen on the server side will reflect in the store automatically. 
+When updating, deleting or adding new values it can be done directly on the database without using the store. This is the pessimistic approach. Only when the data changed in the database the store will get updated.
+It works even offline and the firestore modules will update the database when back online. Unfortunately, not when we reload the app before the device gets back online.
