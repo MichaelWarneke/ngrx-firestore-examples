@@ -1,0 +1,16 @@
+<nav>
+  <div *ngIf="isAuthenticated$ | async; else loginButton">
+      <button class="login-button" (click)="signOut()">Sign out</button>
+  </div>
+  <ng-template #loginButton>
+      <button class="login-button" (click)="signIn()">Sign in</button>
+  </ng-template>
+  <h1>NGRX Firestore Example App</h1>
+  <div class="flex-spacer"></div>
+  <button class="app-button">First</button>
+  <button class="app-button">Second</button>
+</nav>
+<div *ngIf="error$ | async as error" class="error-message">Error: {{error}}</div>
+<main>
+  <router-outlet></router-outlet>
+</main>

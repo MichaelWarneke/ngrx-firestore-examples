@@ -5,7 +5,57 @@
     "npmScope": "ngrx-firestore-examples",
     "latestMigration": "20171129-change-schema"
   },
-  "apps": [],
+  "apps": [
+    {
+      "name": "ngrx-firestore-examples",
+      "root": "apps\\ngrx-firestore-examples\\src",
+      "outDir": "dist/apps/ngrx-firestore-examples",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "../../../test.js",
+      "tsconfig": "../../../tsconfig.app.json",
+      "testTsconfig": "../../../tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "styles.css"
+      ],
+      "scripts": [],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    },
+    {
+      "name": "auth",
+      "root": "libs\\auth\\src",
+      "test": "../../../test.js",
+      "appRoot": ""
+    },
+    {
+      "name": "db",
+      "root": "libs\\db\\src",
+      "test": "../../../test.js",
+      "appRoot": ""
+    },
+    {
+      "name": "login",
+      "root": "libs/login/src",
+      "test": "../../../test.js",
+      "appRoot": ""
+    },
+    {
+      "name": "logout",
+      "root": "libs/logout/src",
+      "test": "../../../test.js",
+      "appRoot": ""
+    }
+  ],
   "e2e": {
     "protractor": {
       "config": "./protractor.conf.js"
@@ -31,7 +81,10 @@
     "schematics": {
       "collection": "@nrwl/schematics",
       "postGenerate": "npm run format",
-      "newProject": ["app", "lib"]
+      "newProject": [
+        "app",
+        "lib"
+      ]
     },
     "styleExt": "css",
     "component": {}

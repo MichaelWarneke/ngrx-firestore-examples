@@ -7,6 +7,8 @@
 
 # dependencies
 /node_modules
+/functions/node_modules
+firebase-data.ts
 
 # IDEs and editors
 /.idea

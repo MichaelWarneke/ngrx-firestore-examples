@@ -109,12 +109,14 @@
     "no-access-missing-member": true,
     "templates-use-public": true,
     "invoke-injectable": true,
-
     "nx-enforce-module-boundaries": [
       true,
       {
         "npmScope": "ngrx-firestore-examples",
-        "lazyLoad": [],
+        "lazyLoad": [
+          "login",
+          "logout"
+        ],
         "allow": []
       }
     ]
