@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from 'angularfire2/firestore';
+import { AngularFirestore, DocumentChangeAction } from 'angularfire2/firestore';
 import { take, map } from 'rxjs/operators';
+import { Observable } from 'rxjs/Observable';
 
 export interface FakeData {
   id?: string | null;
@@ -28,7 +29,7 @@ export class DataDbService {
     }
   }
 
-  getFakeDataStateChanges() {
+  getFakeDataStateChanges(): Observable<DocumentChangeAction[]> {
     return this.afs.collection<FakeData>('fake-data').stateChanges();
   }
 

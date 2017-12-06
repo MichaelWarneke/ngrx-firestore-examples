@@ -1,23 +1,23 @@
 import { FakeData } from "@ngrx-firestore-examples/db";
 
 export enum FirstActionTypes {
-  FAKE_DATA_ADDED = '[FirstData] added',
-  FAKE_DATA_MODIFIED = '[FirstData] modified',
-  FAKE_DATA_REMOVED = '[FirstData] removed'
+  FIRST_DATA_ADDED = '[FirstData] added',
+  FIRST_DATA_MODIFIED = '[FirstData] modified',
+  FIRST_DATA_REMOVED = '[FirstData] removed'
 }
 
 export interface FakeDataAdded {
-  type: FirstActionTypes.FAKE_DATA_ADDED;
+  type: FirstActionTypes.FIRST_DATA_ADDED;
   payload: FakeData;
 }
 
 export interface FakeDataModified {
-  type: FirstActionTypes.FAKE_DATA_MODIFIED;
+  type: FirstActionTypes.FIRST_DATA_MODIFIED;
   payload: FakeData;
 }
 
 export interface FakeDataRemoved {
-  type: FirstActionTypes.FAKE_DATA_REMOVED;
+  type: FirstActionTypes.FIRST_DATA_REMOVED;
   payload: FakeData;
 }
 

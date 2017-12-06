@@ -15,10 +15,10 @@ export const initialState: State = firstAdapter.getInitialState(firstInitialStat
 
 export function firstReducer(state: State = initialState, action: FirstAction) {
   switch (action.type) {
-    case FirstActionTypes.FAKE_DATA_ADDED: 
+    case FirstActionTypes.FIRST_DATA_ADDED: 
       return firstAdapter.addOne(action.payload, state);
 
-    case FirstActionTypes.FAKE_DATA_MODIFIED:
+    case FirstActionTypes.FIRST_DATA_MODIFIED:
       return firstAdapter.updateOne(
       {
         id: action.payload.id,
@@ -27,7 +27,7 @@ export function firstReducer(state: State = initialState, action: FirstAction) {
       state
     );
 
-    case FirstActionTypes.FAKE_DATA_REMOVED:
+    case FirstActionTypes.FIRST_DATA_REMOVED:
       return firstAdapter.removeOne(action.payload.id, state);
 
     default: {

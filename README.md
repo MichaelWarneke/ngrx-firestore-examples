@@ -15,17 +15,22 @@ With these examples I want to reproduce them and discuss the pros and cons.
 I am using nrwl as I think the lib structure is a good place to seperate all the different examples in one repo.
 There is a lib for the the database access functions and different lazy loaded libs for different connections to ngrx.
 
+The live example was NOT build in production to get the log outputs https://ngrx-firestore-examples.firebaseapp.com
+
 Feel free to comment and pull your own approaches...
 
 # Setup
 
 --APP
+
 The App just acts as a container for the authentication and the different libs. It handles the login/logout and routes via the nav buttons to the different libs.
 
 --auth
+
 Auth is the lib handling the authentication. For my database a setup a fake user with a fake password. This is neccessary to to similate the problems occour when the observables are still hot but the user is not authenticated anymore.
 
 --db
+
 Db is the lib to handle all database connections. Pretty straight forward and nothing special to that for the moment.
 
 # first
