@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { FakeData } from '@ngrx-firestore-examples/db';
+import { SecondService } from '../services/second.service';
+
 
 @Component({
   selector: 'app-second-page',
@@ -7,9 +11,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SecondPageComponent implements OnInit {
 
-  constructor() { }
+  fakeData$: Observable<FakeData[]>;
+  constructor(private service: SecondService) { }
 
   ngOnInit() {
+    this.fakeData$ = this.service.getData();
   }
-
 }

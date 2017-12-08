@@ -7,7 +7,6 @@ import { FakeData } from '@ngrx-firestore-examples/db';
   styleUrls: ['./fake-data-view.component.css']
 })
 export class FakeDataViewComponent {
-
+  @Input() title: string;
   @Input() fakeData: FakeData[];
-  
 }
