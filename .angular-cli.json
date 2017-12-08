@@ -60,6 +60,12 @@
       "root": "libs\\second\\src",
       "test": "../../../test.js",
       "appRoot": ""
+    },
+    {
+      "name": "shared-components",
+      "root": "libs\\shared-components\\src",
+      "test": "../../../test.js",
+      "appRoot": ""
     }
   ],
   "e2e": {

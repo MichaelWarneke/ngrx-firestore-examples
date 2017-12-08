@@ -1,11 +1,1 @@
-<h1>First - Fake Data</h1>
-<div class="list">
-  <div class="list-item">
-    <div class="col-1 header">Name</div>
-    <div class="col-2 header">Number</div>
-  </div>
-  <div class="list-item" *ngFor="let data of fakeData$ | async">
-    <div class="col-1">{{data.name}}</div>
-    <div class="col-2">{{data.random_number}}</div>
-  </div>
-</div>
+<fake-data-view [fakeData]="fakeData$ | async"></fake-data-view>
