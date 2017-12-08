@@ -21,7 +21,7 @@ export class FirstEffects {
       };
     })
   );
-/*
+/* Should work again with NGRX V4.1.2
   ngrxOnRunEffects(resolvedEffects$: Observable<EffectNotification>) {
     return this.actions.ofType(AuthActionTypes.SET_AUTHENTICATED).pipe(
       exhaustMap(() => resolvedEffects$.pipe(takeUntil(this.actions.ofType(AuthActionTypes.SET_NOT_AUTHENTICATED)))))
