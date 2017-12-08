@@ -12,9 +12,8 @@ import { firebaseData } from 'firebase-data';
   imports: [
     CommonModule,
     AngularFireModule.initializeApp(firebaseData), 
-    AngularFirestoreModule,
-    AngularFireAuthModule,
     AngularFirestoreModule.enablePersistence(),
+    AngularFireAuthModule,
   ]
 })
 export class DbModule {
