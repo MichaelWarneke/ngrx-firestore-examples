@@ -112,7 +112,6 @@
     "nx-enforce-module-boundaries": [
       true,
       {
-        "npmScope": "ngrx-firestore-examples",
         "lazyLoad": [
           "login",
           "first",
